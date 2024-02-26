@@ -1,0 +1,22 @@
+.inputContainer{
+  display: flex;
+  align-items: center;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+.inputLabel{
+  font-size: var(--font-size-form-inputs);
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+}
+.mainInput{
+  border: none;
+  text-align: right;
+  font-size: var(--font-size-form-inputs);
+  color: var(--very-dark-cyan);
+  background-color: transparent;
+}
+.mainInput:focus{
+  outline: none;
+}
