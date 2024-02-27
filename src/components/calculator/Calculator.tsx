@@ -7,6 +7,6 @@ export default function Calculator() {
     <Card>
       <BillInputs/>
       <BillOutput/>
-      </Card>
+    </Card>
   )
 }
