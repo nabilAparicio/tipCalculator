@@ -15,7 +15,7 @@
   text-align: right;
   font-size: var(--font-size-form-inputs);
   color: var(--very-dark-cyan);
-  background-color: transparent;
+  background-color: transparent; 
 }
 .mainInput:focus{
   outline: none;
