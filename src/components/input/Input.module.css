@@ -1,12 +1,30 @@
 .inputContainer{
+  position: relative;
   display: flex;
   align-items: center;
   background-color: var(--very-light-grayish-cyan);
   border-radius: 4px;
   padding: 4px 12px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.inputContainer:focus-within, .inputContainer:hover{
+  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 0 2px var(--primary-strong-cyan);
+}
+.error{
+  transition: box-shadow 0.2s ease-in-out;
+  animation: shake 0.5s ease-in-out;
+  box-shadow: 0 0 0 2px var(--error-red);
+}
+.errorMessage{
+  right: 0;
+  color: var(--error-red);
+  top: -24px;
+  font-size: 14px;
+  position: absolute;
 }
 .inputLabel{
-  font-size: var(--font-size-form-inputs);
+  font-size: 14px;
   font-weight: 700;
   color: var(--dark-grayish-cyan);
 }
@@ -16,7 +34,16 @@
   font-size: var(--font-size-form-inputs);
   color: var(--very-dark-cyan);
   background-color: transparent; 
+  caret-color: var(--primary-strong-cyan);
 }
 .mainInput:focus{
   outline: none;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
 }
