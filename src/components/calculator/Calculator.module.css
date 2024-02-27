@@ -1,4 +1,5 @@
 .mainContainer{
+    max-width: 930px;
     display: flex;
     gap: 32px;
 }

@@ -15,13 +15,13 @@ export default function Input({label, icon, errorMessage, ...rest}:InputProps) {
   };
 
   return (
-    <div>
+    <>
       {!!label && <Text>{label}</Text>}
       <div className={`${styles.inputContainer} ${isError && styles.error}`}>
       {icon}
       <input {...rest} className={styles.mainInput} onKeyDown={rest.type === 'number'? handleKeyDown : undefined} />
       <span className={styles.errorMessage}>{errorMessage}</span>
       </div>
-    </div>
+    </>
   )
 }

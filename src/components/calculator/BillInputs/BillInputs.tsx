@@ -19,8 +19,8 @@ export default function BillInputs({className}:BillInputsProps) {
           <Button>15%</Button>
           <Button>25%</Button>
           <Button>50%</Button>
-          <Input type='number' placeholder='Custom'/>
-        </div>
+          <Input type='number'  placeholder='Custom'/>
+          </div>
       </div>
       <Input type='number' label='Number of People' icon={<img width={13} height={16} src={'public/assets/images/icon-person.svg'} />}/>
     </div>
