@@ -1,5 +1,5 @@
 .mainButonComponent{
-    flex: 1;
+    width: 100%;
     border: none;
     padding: 8px 16px;
     text-align: center;

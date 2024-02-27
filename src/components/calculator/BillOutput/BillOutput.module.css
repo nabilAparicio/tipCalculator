@@ -1,0 +1,26 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text{
+  color: var(--very-light-grayish-cyan);
+}
+.textPerson{
+  font-size: 14px;
+  color: var(--grayish-cyan);
+}
+.textContainer{
+  display: flex;
+  flex-direction: column;
+}
+.resultNumbers{
+  color: var(--primary-strong-cyan);
+  font-size: 44px;
+}
