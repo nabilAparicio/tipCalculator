@@ -1,0 +1,25 @@
+.mainButonComponent{
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: opacity 0.2s ease-in-out;
+}
+.mainButonComponent:hover{
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.7;
+}
+.variantPrimary{
+    background-color: var(--very-dark-cyan);
+    color: white;
+}
+.variantSecondary{
+    background-color: var(--primary-strong-cyan);
+    color: var(--very-dark-cyan);
+}
+.activePrimary{
+  background-color: var(--primary-strong-cyan);
+  color: var(--very-dark-cyan);
+}
