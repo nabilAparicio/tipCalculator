@@ -1,0 +1,10 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.calcButtons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}

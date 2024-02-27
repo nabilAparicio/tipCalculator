@@ -1,6 +1,11 @@
+import Card from "../../card/Card";
 
-export default function BillOutput() {
+interface BillOutputProps {
+  className?: string;
+}
+
+export default function BillOutput({className}:BillOutputProps) {
   return (
-    <div>BillOutput</div>
+    <Card bgColor='hsl(183, 100%, 15%)' className={`${className}`}>BillOutput</Card>
   )
 }
