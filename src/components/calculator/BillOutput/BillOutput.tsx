@@ -13,6 +13,8 @@ export default function BillOutput({className}:BillOutputProps) {
     const tipAmount = (contextValues.bill * contextValues.tip) / 100;
     const total = (contextValues.bill + tipAmount) / +contextValues.people;
 
+    const totalToShow = total === Infinity || isNaN(total) ? '0.00' : total;
+
     const handleReset = () => {
       setContextValues({
         bill: 0,
@@ -37,7 +39,7 @@ export default function BillOutput({className}:BillOutputProps) {
           <Text clasName={style.text}>Total</Text>
           <Text clasName={style.textPerson}>/ person</Text>
         </div>
-          <span className={style.resultNumbers}>$ {total.toFixed(2)}</span>
+          <span className={style.resultNumbers}>$ {totalToShow}</span>
       </div>
       </div>
       <Button onClick={handleReset} variant="secondary">RESET</Button>

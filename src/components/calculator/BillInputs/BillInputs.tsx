@@ -13,8 +13,6 @@ export default function BillInputs({className}:BillInputsProps) {
   const [peopleError, setPeopleError] = useState<string | null>(null)
   const {contextValues, setContextValues} = useContext(CalculatorContext)
 
-  console.log(contextValues)
-
   const handleTip = useCallback((tip: number) => {
     setContextValues((prev: any) => ({...prev, tip}))
   },[setContextValues, contextValues.tip])
@@ -31,11 +29,10 @@ export default function BillInputs({className}:BillInputsProps) {
     const value = e.target.value
     if (value === '0') {
       setPeopleError('Can\'t be zero')
-      return
+      setTimeout(() => {
+        setPeopleError(null)
+      }, 2500);
     }
-    setTimeout(() => {
-      setPeopleError(null)
-    }, 2000);
     setContextValues((prev: any) => ({...prev, people: value}))
   } ,[setContextValues, contextValues.people])
 
@@ -53,7 +50,7 @@ export default function BillInputs({className}:BillInputsProps) {
           <Input type='number'  placeholder='Custom'/>
           </div>
       </div>
-      <Input type='number' onChange={handlePeopleInput} label='Number of People' value={contextValues.people} errorMessage={'a'} icon={<img width={13} height={16} src={'/assets/images/icon-person.svg'} />}/>
+      <Input type='number' onChange={handlePeopleInput} label='Number of People' value={contextValues.people} errorMessage={peopleError} icon={<img width={13} height={16} src={'/assets/images/icon-person.svg'} />}/>
     </div>
   )
 }
