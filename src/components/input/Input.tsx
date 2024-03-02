@@ -4,7 +4,7 @@ import Text from '../text/Text';
 interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>{
   label?: string;
   icon?: React.ReactNode;
-  errorMessage?: string;
+  errorMessage?: string | null;
 }
 export default function Input({label, icon, errorMessage, ...rest}:InputProps) {
   const isError = !!errorMessage;

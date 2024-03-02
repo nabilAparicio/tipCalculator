@@ -9,10 +9,6 @@
   padding: 4px 12px;
   transition: box-shadow 0.2s ease-in-out;
 }
-.inputContainer:focus-within, .inputContainer:hover{
-  transition: box-shadow 0.2s ease-in-out;
-  box-shadow: 0 0 0 2px var(--primary-strong-cyan);
-}
 .error{
   transition: box-shadow 0.2s ease-in-out;
   animation: shake 0.5s ease-in-out;
@@ -24,6 +20,11 @@
   top: -24px;
   font-size: 14px;
   position: absolute;
+  z-index: 1;
+}
+.inputContainer:focus-within, .inputContainer:hover{
+  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 0 2px var(--primary-strong-cyan);
 }
 .inputLabel{
   width: 100%;
