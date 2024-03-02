@@ -41,7 +41,7 @@ export default function BillInputs({className}:BillInputsProps) {
 
   return (
     <div className={`${styles.mainContainer} ${className}`}>
-      <Input onChange={handleBillInput} value={contextValues.bill} type='number' label='Bill' icon={<img width={11} height={17} src={'public/assets/images/icon-dollar.svg'} />}/>
+      <Input onChange={handleBillInput} value={contextValues.bill} type='number' label='Bill' icon={<img width={11} height={17} src={'assets/images/icon-dollar.svg'} />}/>
       <div>
         <Text>Select Tip %</Text>
         <div className={styles.calcButtons}>
@@ -53,7 +53,7 @@ export default function BillInputs({className}:BillInputsProps) {
           <Input type='number'  placeholder='Custom'/>
           </div>
       </div>
-      <Input type='number' onChange={handlePeopleInput} label='Number of People' value={contextValues.people} errorMessage={'a'} icon={<img width={13} height={16} src={'public/assets/images/icon-person.svg'} />}/>
+      <Input type='number' onChange={handlePeopleInput} label='Number of People' value={contextValues.people} errorMessage={'a'} icon={<img width={13} height={16} src={'/assets/images/icon-person.svg'} />}/>
     </div>
   )
 }

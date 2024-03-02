@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className='mainComponent'>
-      <img src='public/assets/images/logo.svg' alt='main calculator app logo' className='logo'/>
+      <img src='assets/images/logo.svg' alt='main calculator app logo' className='logo'/>
       <Calculator/>
     </div>
   )
