@@ -1,5 +1,6 @@
 .mainContainer{
     max-width: 930px;
+    flex-wrap: nowrap;
     display: flex;
     gap: 32px;
 }
@@ -8,4 +9,11 @@
 }
 .BillOutput{
   flex: 1;
+}
+
+@media screen and (max-width: 768px){
+    .mainContainer{
+        flex-direction: column;
+    }
+  
 }
