@@ -13,7 +13,7 @@ export default function BillOutput({className}:BillOutputProps) {
     const tipAmount = (contextValues.bill * contextValues.tip) / 100;
     const total = (contextValues.bill + tipAmount) / +contextValues.people;
 
-    const totalToShow = total === Infinity || isNaN(total) ? '0.00' : total;
+    const totalToShow = total === Infinity || isNaN(total) ? '0.00' : total.toFixed(2);
 
     const handleReset = () => {
       setContextValues({
