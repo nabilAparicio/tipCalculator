@@ -42,12 +42,14 @@ export default function BillInputs({className}:BillInputsProps) {
       <div>
         <Text>Select Tip %</Text>
         <div className={styles.calcButtons}>
-          <Button isActive={contextValues.tip === 5} onClick={()=> handleTip(5)}>5%</Button>
-          <Button isActive={contextValues.tip === 10} onClick={()=> handleTip(10)}>10%</Button>
-          <Button isActive={contextValues.tip === 15} onClick={()=> handleTip(15)}>15%</Button>
-          <Button isActive={contextValues.tip === 25} onClick={()=> handleTip(25)}>25%</Button>
-          <Button isActive={contextValues.tip === 50} onClick={()=> handleTip(50)}>50%</Button>
-          <Input type='number'  placeholder='Custom'/>
+            <Button isActive={contextValues.tip === 5} onClick={()=> handleTip(5)}>5%</Button>
+            <Button isActive={contextValues.tip === 10} onClick={()=> handleTip(10)}>10%</Button>
+            <Button isActive={contextValues.tip === 15} onClick={()=> handleTip(15)}>15%</Button>
+            <Button isActive={contextValues.tip === 25} onClick={()=> handleTip(25)}>25%</Button>
+            <Button isActive={contextValues.tip === 50} onClick={()=> handleTip(50)}>50%</Button>
+            <div className={styles.customContainer}>
+              <Input type='number'  placeholder='Custom'/>
+            </div>
           </div>
       </div>
       <Input type='number' onChange={handlePeopleInput} label='Number of People' value={contextValues.people} errorMessage={peopleError} icon={<img width={13} height={16} src={'/assets/images/icon-person.svg'} />}/>

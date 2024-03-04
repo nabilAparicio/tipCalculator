@@ -6,6 +6,7 @@
     font-size: 24px;
     cursor: pointer;
     border-radius: 6px;
+    min-width: 125px;
     transition: opacity 0.2s ease-in-out;
 }
 .mainButonComponent:hover{

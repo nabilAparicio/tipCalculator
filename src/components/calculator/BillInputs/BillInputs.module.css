@@ -5,6 +5,12 @@
 }
 .calcButtons{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 125px), 1fr));
     gap: 16px;
+}
+.customContainer{
+    width: 100%;
+    background-color: brown;
+    grid-column-start: auto;
+    grid-column-end: auto;
 }
