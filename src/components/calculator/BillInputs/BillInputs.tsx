@@ -47,9 +47,7 @@ export default function BillInputs({className}:BillInputsProps) {
             <Button isActive={contextValues.tip === 15} onClick={()=> handleTip(15)}>15%</Button>
             <Button isActive={contextValues.tip === 25} onClick={()=> handleTip(25)}>25%</Button>
             <Button isActive={contextValues.tip === 50} onClick={()=> handleTip(50)}>50%</Button>
-            <div className={styles.customContainer}>
-              <Input type='number'  placeholder='Custom'/>
-            </div>
+              <Input type='number' onChange={((e) => handleTip(+e.target.value))}  placeholder='Custom'/>
           </div>
       </div>
       <Input type='number' onChange={handlePeopleInput} label='Number of People' value={contextValues.people} errorMessage={peopleError} icon={<img width={13} height={16} src={'/assets/images/icon-person.svg'} />}/>

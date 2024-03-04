@@ -11,7 +11,7 @@ export const CalculatorContext = createContext({} as any)
 export default function Calculator() {
 
   const [contextValues, setContextValues] = useState({
-    bill: 0,
+    bill: '',
     tip: 0,
     people: ''
   })
