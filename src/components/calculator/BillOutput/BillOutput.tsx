@@ -17,7 +17,7 @@ export default function BillOutput({className}:BillOutputProps) {
 
     const handleReset = () => {
       setContextValues({
-        bill: 0,
+        bill: '',
         tip: 0,
         people: ''
       })
